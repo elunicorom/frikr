@@ -1,3 +1,21 @@
+commit d6841fe547c93b4ca6a276c1367903b70022d66f
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 20:50:23 2016 -0500
+
+    URl agregado
+
+commit 8404a588fcbfd42cfd157bfdc176e6c987d51b31
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 00:44:18 2016 -0500
+
+    Se creo la app photos
+
+commit 3979c0c4b8abc4506808e97d3b1ffe16992696d6
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 00:31:59 2016 -0500
+
+    Configuracion de BD hecha y creada
+
 commit d8ba594af4a35ea746ec94764785194fb20fc8f3
 Author: Ton <barsa_real_31@hotmail.com>
 Date:   Fri Nov 25 00:02:05 2016 -0500
