@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -13,8 +14,16 @@ LICENSES = (
 	(CREATIVE_COMMONS,'Creative Commons')
 )
 
-class Photo(models.Model):
+PUBLIC='PUB'
+PRIVATE='PRI'
 
+VISIBILITY = (
+	(PUBLIC,'Publica'),
+	(PRIVATE,'Privada')
+)
+
+class Photo(models.Model):
+	owner = models.ForeignKey(User)
 	name = models.CharField(max_length=150)
 	url = models.URLField()
 	#blank=TRue hace que el campo sea opcional
@@ -24,3 +33,6 @@ class Photo(models.Model):
 	#auto_now=True actualiza automatico
 	modified_at = models.DateTimeField(auto_now=True)
 	license = models.CharField(max_length=3,choices=LICENSES)
+	visibility = models.CharField(max_length=3,choices=VISIBILITY,default=PUBLIC)
+	def _unicode_(self):
+		return self.name
