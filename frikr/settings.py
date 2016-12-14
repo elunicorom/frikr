@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'frikr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testeo',
+        'NAME': 'frikr',
         'USER': 'oliver',
         'PASSWORD' : 'yugiho2000',
         'HOST' : 'localhost',
