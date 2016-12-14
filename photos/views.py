@@ -5,7 +5,7 @@ from photos.models import Photo
 
 # vistas son controladores :v --- Manejan Url
 def home(request):
-	photos = Photo.objects.all()
+	photos = Photo.objects.all().order_by('-created_at')
 	context = {
 		'photos_list': photos
 	}
