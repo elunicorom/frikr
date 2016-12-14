@@ -20,7 +20,6 @@ from photos import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-
     url(r'^$',views.home,name='home'),
 
 ]
