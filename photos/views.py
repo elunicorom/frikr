@@ -1,6 +1,7 @@
 from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from photos.models import Photo,PUBLIC
+from photos.forms import PhotoForm
 
 
 # vistas son controladores :v --- Manejan Url
@@ -36,3 +37,21 @@ def detail(request,pk):
 		return render(request,'photos/detail.html',context)
 	else:
 		return HttpresponseNotFound('No existe la foto') # 404 Not found
+
+def photo_create(request):
+	"""
+	Muestra un formulario para crear una foto y la crea si la peticion es POST
+	"""
+
+	if request.method=='GET':
+		form = PhotoForm
+	else:
+		form = PhotoForm(request.POST)
+		if form.is_valid():
+			new_photo=form.save()#guarda el objeto y devuelmelo
+	
+	context={
+		'form': form
+	}
+
+	return render(request,'photos/new_photo.html',context)
