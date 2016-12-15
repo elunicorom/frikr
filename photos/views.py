@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponseNotFound
 from django.shortcuts import render
 from photos.models import Photo,PUBLIC
 
@@ -7,7 +7,7 @@ from photos.models import Photo,PUBLIC
 def home(request):
 	photos = Photo.objects.filter(visibility=PUBLIC).order_by('-created_at')
 	context = {
-		'photos_list': photos
+		'photos_list': photos[:5]
 	}
 	return render(request,'photos/home.html',context)
 
@@ -26,5 +26,13 @@ def detail(request,pk):
 	except Photo.MultipleObjects:
 		photo=None
 	"""
-	possible_photos = Photos.objects.filter(pk=pk)
-	photo
+	possible_photos = Photo.objects.filter(pk=pk)
+	photo = possible_photos[0] if len(possible_photos)==1 else None
+	if photo is not None:
+		#cargar la plantilla de detalle
+		context = {
+			'photo':photo
+		}
+		return render(request,'photos/detail.html',context)
+	else:
+		return HttpresponseNotFound('No existe la foto') # 404 Not found

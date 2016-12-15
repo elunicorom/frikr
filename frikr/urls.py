@@ -21,6 +21,6 @@ from photos import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.home,name='home'),
-    url(r'^photos/(?P<pk>[0-9]+)$','photos.views.detail')
+    url(r'^photos/(?P<pk>[0-9]+)$',views.detail,name='detail')
 
 ]
