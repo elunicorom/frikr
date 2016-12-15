@@ -17,10 +17,14 @@ Including another URLconf
 from django.conf.urls import include,url
 from django.contrib import admin
 from photos import views
+from users import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$',views.home,name='home'),
-    url(r'^photos/(?P<pk>[0-9]+)$',views.detail,name='detail')
+    url(r'^$',views.home),
+    url(r'^photos/(?P<pk>[0-9]+)$',views.detail),
+#Users URL
+    url(r'^login$',views.login),
+    url(r'^logout$',views.logout)
 
 ]
