@@ -132,3 +132,19 @@ STATIC_URL = '/static/'
 #LOGIN URL
 
 LOGIN_URL = '/login'  #cuando un usuario no esta autenticado , le redirige a login
+
+
+#BADWORDS http://goo.gl/G2nCU7
+
+PROJECT_BADWORDS=['Abollao','Abrazafarolas','Afilasables','Analfabestia','Apollardao','Arrastramantas','Arrollapastos','Asaltapozos',
+'Asustatrenes','Bailaferias','Bebecharcos','Bobolaverga','Bolascombro','Cabezabuque','Cabezakiko','Cabezantorcha','Cagaestacas',
+'Cagaportales','Cansaliebres','Cantamañanas','Caracartón','Carachancla','Caraespátula','Caraestaca','Carahogaza','Carajaula',
+'Caranabo','Carapan','Carasapo','Carasuela','Cazurro','Cebollino','Cenutrio','Ceporro','hafacharcos','Chimpamonas','Chupaescrotos',
+'Cierrabares','Cuerpoescombro','Culoalberca','Descosealpargatas','Desbaratabailes','Empaellao','Empanao','Enderezaplátanos',
+'Esgarramantas','Feodoble','Follacabras','Follácaros','Gilipipas','Huelebragas','Lechuguino','Limpiatubos','Mamahostias','Mangurrián',
+'Mascachapas','Masturbamulos','Masturbaperros','Masturbavacas','Mataperros','Meapilas','Membrillo','Mierdaseca','Morroesfinge',
+'Morroperca','Morroputa','Muerdealmohadas','Pataliebre','Pecholata','Pechopértiga','Peinabombillas','Peinaburras','Pelabombillas',
+'Pelagatos','Pelandrusca','Pelarrabos','Pellizcacristales','Perroflauta','Pinchacolillas','Pisapedales','Pudrecolchones','Putapénico',
+'Pánfilo','Saltacequias','Sietemesino','Soplanucas','Soplasartenes','Tarambana','Tolai','Tontol','lápiz','Tontolaba','Tontoligo',
+'Tontoloscojones','Tontopolla','Tontoprofundo','Tragaldabas','Tragalpacas','Tuercebotas','Vuelcalitros','Zanahorio','Zarandajo',
+'Zarrapastroso','Zopenco','Zurremierdas']
