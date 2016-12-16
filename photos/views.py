@@ -4,53 +4,69 @@ from photos.models import Photo,PUBLIC
 from photos.forms import PhotoForm
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
+from django.views.generic import View
+from django.utils.decorators import method_decorator
+	
+class HomeView(View):
 
-
-# vistas son controladores :v --- Manejan Url
-def home(request):
-	photos = Photo.objects.filter(visibility=PUBLIC).order_by('-created_at')
-	context = {
-		'photos_list': photos[:5]
-	}
-	return render(request,'photos/home.html',context)
-
-def detail(request,pk):
-	"""
-	carga la pagina de detalle de una foto
-	:param request: Httpresponse
-	:param pk: id de la foto
-	:return  Httpresponse
-	"""
-	"""
-	try:
-		photo = Photo.objects.get(pk=pk)
-	except Photo.DoesNotExist:
-		photo=None
-	except Photo.MultipleObjects:
-		photo=None
-	"""
-	possible_photos = Photo.objects.filter(pk=pk)
-	photo = possible_photos[0] if len(possible_photos)==1 else None
-	if photo is not None:
-		#cargar la plantilla de detalle
+	# vistas son controladores :v --- Manejan Url
+	def get(self,request):
+		#devuelve el home de la pagina
+		photos = Photo.objects.filter(visibility=PUBLIC).order_by('-created_at')
 		context = {
-			'photo':photo
+			'photos_list': photos[:5]
 		}
-		return render(request,'photos/detail.html',context)
-	else:
-		return HttpresponseNotFound('No existe la foto') # 404 Not found
+		return render(request,'photos/home.html',context)
+
+class DetailView(View):
+	def get(self,request,pk):
+		"""
+		carga la pagina de detalle de una foto
+		:param request: Httpresponse
+		:param pk: id de la foto
+		:return  Httpresponse
+		"""
+		"""
+		try:
+			photo = Photo.objects.get(pk=pk)
+		except Photo.DoesNotExist:
+			photo=None
+		except Photo.MultipleObjects:
+			photo=None
+		"""
+		possible_photos = Photo.objects.filter(pk=pk).select_related('owner')
+		photo = possible_photos[0] if len(possible_photos)>=1 else None
+		if photo is not None:
+			#cargar la plantilla de detalle
+			context = {
+				'photo':photo
+			}
+			return render(request,'photos/detail.html',context)
+		else:
+			return HttpresponseNotFound('No existe la foto') # 404 Not found
 
 
-@login_required()
-def photo_create(request):
-	"""
-	Muestra un formulario para crear una foto y la crea si la peticion es POST
-	"""
-
-	success_message=''
-	if request.method=='GET':
+class CreateView(View):
+	@method_decorator(login_required())
+	def get(self,request):
+		"""
+		Muestra un formulario para crear una foto
+		"""
 		form = PhotoForm()
-	else:
+		context={
+			'form': form,
+			'success_message': success_message
+		}
+		return render(request,'photos/new_photo.html',context)
+
+
+
+	@method_decorator(login_required())
+	def post(self,request):
+		"""
+		Muestra un formulario para crear una foto y la crea si la peticion es POST
+		"""
+		success_message=''
 		photo_with_owner=Photo()
 		photo_with_owner.owner=request.user # 	asigno como propietario de la foto , al usuario autenicado
 		form = PhotoForm(request.POST, instance=photo_with_owner)
@@ -62,9 +78,9 @@ def photo_create(request):
 			success_message+= 'Ver Foto'
 			success_message+= '</a>'
 	
-	context={
-		'form': form,
-		'success_message': success_message
-	}
+		context={
+			'form': form,
+			'success_message': success_message
+		}
 
-	return render(request,'photos/new_photo.html',context)
+		return render(request,'photos/new_photo.html',context)
