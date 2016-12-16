@@ -55,7 +55,7 @@ def photo_create(request):
 		photo_with_owner.owner=request.user # 	asigno como propietario de la foto , al usuario autenicado
 		form = PhotoForm(request.POST, instance=photo_with_owner)
 		if form.is_valid():
-			new_photo=form.save()#guarda el objeto y devuelmelo
+			new_photo=form.save() #guarda el objeto y devuelmelo
 			form=PhotoForm()
 			success_message='Guardado exitoso!!'
 			success_message+='<a href="{0}">'.format(reverse('photos_detail',args=[new_photo.pk]))
