@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Django settings for frikr project.
 
@@ -126,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#LOGIN URL
+
+LOGIN_URL = '/login'  #cuando un usuario no esta autenticado , le redirige a login

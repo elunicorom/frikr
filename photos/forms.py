@@ -7,4 +7,4 @@ class PhotoForm(forms.ModelForm):
 	#Formulario para el modelo Photo
 	class Meta:
 		model = Photo
-		exclude = []
+		exclude = ['owner']
