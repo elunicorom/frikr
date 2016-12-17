@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,6 +19,7 @@ from django.conf.urls import include,url
 from django.contrib import admin
 from photos.views import DetailView,CreateView,HomeView,PhotoListView,UserPhotosView
 from users.views import LoginView,LogoutView
+from users.api import UserListAPI
 from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
@@ -31,7 +33,10 @@ urlpatterns = [
 
 #Users URL
     url(r'^login$',LoginView.as_view(),name='users_login'),
-    url(r'^logout$',LogoutView.as_view(),name='users_logout')
+    url(r'^logout$',LogoutView.as_view(),name='users_logout'),
+
+#Users API URL
+    url(r'^api/1.0/users/$',UserListAPI.as_view(),name='user_list_api')
 
 
 ]
