@@ -1,5 +1,5 @@
 from django.http import HttpResponseNotFound
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from photos.models import Photo,PUBLIC
 from photos.forms import PhotoForm
 from django.core.urlresolvers import reverse
@@ -35,16 +35,20 @@ class DetailView(View):
 		except Photo.MultipleObjects:
 			photo=None
 		"""
-		possible_photos = Photo.objects.filter(pk=pk).select_related('owner')
-		photo = possible_photos[0] if len(possible_photos)>=1 else None
-		if photo is not None:
-			#cargar la plantilla de detalle
-			context = {
-				'photo':photo
-			}
-			return render(request,'photos/detail.html',context)
+
+		if request.user.is_authenticated():
+			possible_photos = Photo.objects.filter(pk=pk).select_related('owner')
+			photo = possible_photos[0] if len(possible_photos)>=1 else None
+			if photo is not None:
+				#cargar la plantilla de detalle
+				context = {
+					'photo':photo
+				}
+				return render(request,'photos/detail.html',context)
+			else:
+				return HttpresponseNotFound('No existe la foto') # 404 Not found
 		else:
-			return HttpresponseNotFound('No existe la foto') # 404 Not found
+			return redirect('users_login')
 
 
 class CreateView(View):
