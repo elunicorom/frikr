@@ -94,9 +94,13 @@ class ListView(View):
 		#-Fotos del usuario conectado o las publcias de otros
 		#-Si el usuario es superusuario, muestra todas las fotos
 
-		if request.user.is_authenticated():
+		if not request.user.is_authenticated():
 			photos=Photo.objects.filter(visibility=PUBLIC)
 		elif request.user.is_superuser:
 			photos=Photo.objects.all()
 		else:
 			photos=Photo.objects.filter(Q(owner=request.user)|Q(visibility=PUBLIC))
+		context={
+			'photos': photos
+		}
+		return render(request,'photos/photos_list.html',context)
