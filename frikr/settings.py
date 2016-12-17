@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photos',
     'frikr',
-    'users'
+    'users',
+    'rest_framework'
     
 ]
 
