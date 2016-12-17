@@ -4,9 +4,10 @@
 {% block section %}
 	<h1>{{ photo.name }}</h1>
 	<img src="{{ photo.url }}" alt="{{ photo.name }}" width="300">
-	<p>{{ photo.descripcion }}</p>
+	<p>{{ photo.descripcion }}</p>	
 	<p>
 		<strong>Autor:</strong> 
+		<p>{{ photo.owner }}</p>
 		 
 	</p>
 {% endblock %}
