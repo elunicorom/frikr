@@ -1,3 +1,9 @@
+commit 7ce7182656e4a86f5179517e8e66248e0db41ea2
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Tue Dec 20 14:19:46 2016 -0500
+
+    resultados de listado de acuerdo a usuario y permisos implementado
+
 commit 74f5b0d9ec1eeb9398ba52c1fb408fc51b6d1ee5
 Author: Oliver <barsa_real_31@hotmail.com>
 Date:   Tue Dec 20 11:49:27 2016 -0500
