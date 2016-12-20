@@ -1,0 +1,227 @@
+commit 74f5b0d9ec1eeb9398ba52c1fb408fc51b6d1ee5
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Tue Dec 20 11:49:27 2016 -0500
+
+    clase validators implementada
+
+commit 04891fb60f5a00e7273e113ded5a8e4d804fff5d
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Mon Dec 19 22:56:54 2016 -0500
+
+    paginador de fotos y usuarios implementado
+
+commit 540c99d3caf1a043a6d750e61b1fa0aa5dd09dfc
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Mon Dec 19 00:06:23 2016 -0500
+
+    API de photos completa
+
+commit d1c6af329fb0ba2849f386877aef5c8e7ca56e02
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sun Dec 18 23:36:03 2016 -0500
+
+    lista de photos en api implementada
+
+commit 09270c25d8dadee7a7f3afaefc04ff0318ee29e1
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sun Dec 18 20:16:20 2016 -0500
+
+    API completa_ listar,crear,borrar,editar
+
+commit 3a6a6c0c439c2c18a280a97dab4a5804a4475be7
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sat Dec 17 14:50:56 2016 -0500
+
+    UserDetailAPI implementada
+
+commit d8b1650a5287bb8f20255bda955835965d495886
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sat Dec 17 14:38:45 2016 -0500
+
+    APIView colocado
+
+commit 43be7289f03ff7185b1d3e2b85e238eb7ed2e26c
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sat Dec 17 14:34:40 2016 -0500
+
+    archivo api creado, y serializers tambien
+
+commit 6d7e61ff0e604d4482e4091f9a728acb0c2dc672
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Sat Dec 17 10:41:58 2016 -0500
+
+    rest framework instalado y agregado al settins.py
+
+commit 784175928d5af0c315d11767f3716d098e294328
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 23:15:42 2016 -0500
+
+    traveseando en el admin de django
+
+commit 66ab0d1976dc2f1bad0f8ec7036cc64a38472840
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 22:49:32 2016 -0500
+
+    bootstrap implementado
+
+commit a00d485f4d84be876009f7a1ad7dfd04deef4742
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 22:31:05 2016 -0500
+
+    Vista generica para mostrar fotos solo del usuario implementada
+
+commit d3602ca6db08ddbc50453058acf8a80fe6d98608
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 19:52:11 2016 -0500
+
+    validacion de seguridad de detalle de photo hecha de acuerdo a mi criterio :v
+
+commit 340d51c0a93aa50a6fb7babe4d505adc47561638
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 19:36:35 2016 -0500
+
+    Refactorizacion de la plantilla de listado de fotos hecha
+
+commit bc064982153a4622ede2920945f07b68bc88ece8
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 19:10:14 2016 -0500
+
+    Recuperacion de fotos en funcion del usuario usando Q
+
+commit dd8baff40f8e76856eecab083410e4a6d6c38a99
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Fri Dec 16 18:51:33 2016 -0500
+
+    Vistas basadas en clases implementadas
+
+commit 19bfdd3b4cc278354d7f019f63c6db49ffdd0c36
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 23:22:06 2016 -0500
+
+    Agregadas las badwords
+
+commit 25c5f2ca13ffdaeb7f03202f871fc5d0958702a2
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 22:04:59 2016 -0500
+
+    haciendo nuestras apps portables , es decir reconfigurables
+
+commit d0deb9239031aeb32cc6655e543e0fefd7ce1d7c
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 21:40:51 2016 -0500
+
+    usuario con creacion de fotos relacionados
+
+commit 95d30541674db391df84756dba2906ab500910db
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 12:03:41 2016 -0500
+
+    Model form implementado en la creacion de fotos , asi como su url
+
+commit 808c4647bde292fcaa0e2a1c3cfb73acc991f9b4
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 10:46:30 2016 -0500
+
+    Form de django usado desde una vista
+
+commit 1ae587c21f0b16b33619920eda0f5ba23493cf1f
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 01:03:25 2016 -0500
+
+    implementacion del login completada junto con sus medidas de seguridad
+
+commit 6d4e30978757393fb94e56335a1b1fda2f54dd58
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 00:25:50 2016 -0500
+
+    logout terminado, formulario de login y proteccion para el solucionado y funcionando
+
+commit 6941f8d87042b98414abd32ecbc30f8a8d053cd3
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Thu Dec 15 00:00:47 2016 -0500
+
+    url reconfigurada su importacion por problemas en version de django
+
+commit 44fcda57a846ec8c34680ec47279f8f97dee4151
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 23:07:31 2016 -0500
+
+    agregada app users y sus url
+
+commit 330150fedb6d22efea6fa5721c81fd90605b53ba
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 22:47:27 2016 -0500
+
+    agregado detalle a fotos y link de redireccion
+
+commit f73b79e8cc0348c20d8c33278372286c0b96e4dd
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 17:57:33 2016 -0500
+
+    agregando
+
+commit c258530ae6f68aabb5d7bca5eab713843ecf4672
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 17:09:19 2016 -0500
+
+    agregada propiedad de visibilidad y campo propietario
+
+commit 7faea9d029b88de393281353d46b2f61e24c69ac
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 16:36:55 2016 -0500
+
+    mas fotos agregadas, 10 en total
+
+commit fcb845fcda3cdceab3e3e439928faefa2486b68a
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Wed Dec 14 16:21:35 2016 -0500
+
+    Imagenes correspondientes a cada foto agregadas
+
+commit 442abab3417fbd459e0cf99ba0ada565ede52e20
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Tue Dec 13 20:06:13 2016 -0500
+
+    objetos traidos de la BD
+
+commit cb16a88a2330c9b3336dd409fa779912815e2930
+Author: Oliver <barsa_real_31@hotmail.com>
+Date:   Tue Dec 13 19:54:44 2016 -0500
+
+    migracion creada
+
+commit 49ebabb5f284f14fd9d4fcb9a1e7195180a78d87
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 21:29:46 2016 -0500
+
+    BD migrada y creado el modelo Photos
+
+commit d6841fe547c93b4ca6a276c1367903b70022d66f
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 20:50:23 2016 -0500
+
+    URl agregado
+
+commit 8404a588fcbfd42cfd157bfdc176e6c987d51b31
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 00:44:18 2016 -0500
+
+    Se creo la app photos
+
+commit 3979c0c4b8abc4506808e97d3b1ffe16992696d6
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 00:31:59 2016 -0500
+
+    Configuracion de BD hecha y creada
+
+commit d8ba594af4a35ea746ec94764785194fb20fc8f3
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Fri Nov 25 00:02:05 2016 -0500
+
+    Creamos proyecto de Django
+
+commit 55b06ba6144e98b0eac9b626a658fc4fd523ecef
+Author: Ton <barsa_real_31@hotmail.com>
+Date:   Thu Nov 24 23:25:27 2016 -0500
+
+    Carpeta de proyecto de prueba
