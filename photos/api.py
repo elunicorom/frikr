@@ -2,7 +2,7 @@
 
 
 from photos.models import Photo
-from photos.serializers import PhotoSerializer
+from photos.serializers import PhotoSerializer,PhotoListSerializer
 from rest_framework.response import Response
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 
@@ -10,7 +10,10 @@ from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIVi
 class PhotoListAPI(ListCreateAPIView):
 
 	queryset = Photo.objects.all()
-	serializer_class=PhotoSerializer#solo decirle la clase, no instanciarla
+	#solo decirle la clase, no instanciarla
+
+	def get_serializer_class(self):
+		return PhotoSerializer if self.request.method=='POST' else PhotoListSerializer
 
 class PhotoDetailAPI(RetrieveUpdateDestroyAPIView):
 	queryset = Photo.objects.all()
