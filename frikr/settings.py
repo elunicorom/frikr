@@ -149,3 +149,11 @@ PROJECT_BADWORDS=['Abollao','Abrazafarolas','Afilasables','Analfabestia','Apolla
 'Pánfilo','Saltacequias','Sietemesino','Soplanucas','Soplasartenes','Tarambana','Tolai','Tontol','lápiz','Tontolaba','Tontoligo',
 'Tontoloscojones','Tontopolla','Tontoprofundo','Tragaldabas','Tragalpacas','Tuercebotas','Vuelcalitros','Zanahorio','Zarandajo',
 'Zarrapastroso','Zopenco','Zurremierdas']
+
+
+#REST FRAMEWORK_SETTINGS
+
+REST_FRAMEWORK={
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':3
+}
